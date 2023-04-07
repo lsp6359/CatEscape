@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ArrowController : MonoBehaviour
 {
+    //í…ŒìŠ¤íŠ¸
     GameObject gDirector = null;
     GameObject gPlayer = null;
     Vector2 vPosition1 = Vector2.zero;
@@ -23,14 +24,14 @@ public class ArrowController : MonoBehaviour
     void Update()
     {
         
-        // °ÔÀÓÀÌ ÁøÇàÁßÀÎ »óÅÂ¶ó¸é È­»ì ½ñ¾ÆÁü
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
         if (Time.timeScale == 1)
         {
-            // ÇÁ·¹ÀÓ¸¶´Ù µî¼ÓÀ¸·Î ³«ÇÏ½ÃÅ²´Ù.
+            // ï¿½ï¿½ï¿½ï¿½ï¿½Ó¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï½ï¿½Å²ï¿½ï¿½.
             transform.Translate(0, -0.1f, 0);
         }
 
-        // È­¸é ¹ÛÀ¸·Î ³ª¿À¸é ¿ÀºêÁ§Æ®¸¦ ¼Ò¸ê½ÃÅ²´Ù.
+        // È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ò¸ï¿½ï¿½Å²ï¿½ï¿½.
         if (transform.position.y < -5.0f)
         {
           
@@ -39,19 +40,19 @@ public class ArrowController : MonoBehaviour
 
       
 
-        // Ãæµ¹ ÆÇÁ¤
-        vPosition1 = transform.position;               // È­»ìÀÇ Áß½É ÁÂÇ¥
-        vPosition2 = this.gPlayer.transform.position;  // ÇÃ·¹ÀÌ¾îÀÇ Áß½É ÁÂÇ¥
+        // ï¿½æµ¹ ï¿½ï¿½ï¿½ï¿½
+        vPosition1 = transform.position;               // È­ï¿½ï¿½ï¿½ï¿½ ï¿½ß½ï¿½ ï¿½ï¿½Ç¥
+        vPosition2 = this.gPlayer.transform.position;  // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½ ï¿½ß½ï¿½ ï¿½ï¿½Ç¥
         vDistance = vPosition1 - vPosition2;
         float fDistance = vDistance.magnitude;
-        float fR1 = 0.5f;                               // È­»ìÀÇ ¹Ý°æ
-        float fR2 = 1.0f;                               // ÇÃ·¹ÀÌ¾îÀÇ ¹Ý°æ
+        float fR1 = 0.5f;                               // È­ï¿½ï¿½ï¿½ï¿½ ï¿½Ý°ï¿½
+        float fR2 = 1.0f;                               // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½ ï¿½Ý°ï¿½
 
         if (fDistance < fR1 + fR2)
         {
             gDirector.GetComponent<GameDirector>().DecreseHP();
 
-            // Ãæµ¹ÇÑ °æ¿ì´Â È­»ìÀ» Áö¿î´Ù.
+            // ï¿½æµ¹ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½.
             ArrowDestroy();
         }
 
@@ -60,7 +61,7 @@ public class ArrowController : MonoBehaviour
 
     }
 
-    // È­»ì ¾ø¾Ö´Â ÇÔ¼ö
+    // È­ï¿½ï¿½ ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½Ô¼ï¿½
     public void ArrowDestroy()
     {
         Destroy(gameObject);
